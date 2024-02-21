@@ -257,6 +257,11 @@ impl ReplSession {
         &self.prompt
     }
 
+    /// Set the expected prompt.
+    pub fn set_prompt(&mut self, prompt: String) {
+        self.prompt = prompt
+    }
+
     /// Get a used quit command.
     pub fn get_quit_command(&self) -> Option<&str> {
         self.quit_command.as_deref()
